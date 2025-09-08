@@ -8,12 +8,23 @@
     <title>Todo App</title>
   </head>
   <body>
-    <header class="flex justify-between items-center p-10 bg-gray-700 text-white">
+    <div class="grid grid-cols-3 grid-rows-[auto_1fr] min-h-screen" id="app">
+    <header class="col-span-3 flex justify-between items-center p-10 bg-gray-700 text-white">
       <div class="flex justify-center text-5xl gap-4">
         <i class="fa-solid fa-clipboard-list"></i>
         <h1>Todo List</h1>
       </div>
     </header>
+      <nav class="row-span-1 flex flex-col justify-center bg-gray-400">
+        <button class="btn">Inbox</button>
+        <button class="btn">Today</button>
+        <button class="btn">This week</button>
+      </nav>
+      <main class="col-span-2 flex justify-center">
+        <h1>Inbox</h1>
+      </main>
+      <footer class="col-span-3 flex justify-center bg-gray-700 p-2 text-white">copyright</footer>
+    </div>
     <script type="module" src="/src/main.ts"></script>
     <script src="https://kit.fontawesome.com/f0a76e6894.js" crossorigin="anonymous"></script>
   </body>
