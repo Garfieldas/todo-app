@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -8,43 +8,104 @@
     <title>Todo App</title>
   </head>
   <body>
-  <div class="grid grid-cols-1 md:grid-cols-[300px_1fr] grid-rows-[auto_1fr_auto] min-h-screen">
-    <header class="col-span-full flex justify-between items-center p-10 bg-gray-700 text-white">
-      <div class="flex md:justify-center justify-between md:text-5xl text-4xl gap-4 w-full">
-        <div class="flex gap-2">
-      <i class="fa-regular fa-calendar"></i>
-        <h1>Todo List</h1>
-      </div>
-        <button class="block md:hidden">
-          <i class="fa-solid fa-bars"></i>
-        </button>
-      </div>
-    </header>
-      <nav class="hidden md:flex md:row-start-2 md:col-start-1 flex-col items-start gap-4 p-6 bg-gray-400 font-medium">
+    <div
+      class="grid grid-cols-1 md:grid-cols-[300px_1fr] grid-rows-[auto_1fr_auto] min-h-screen relative"
+    >
+      <header
+        class="col-span-full flex justify-between items-center p-10 bg-gray-700 text-white"
+      >
+        <div
+          class="flex md:justify-center justify-between md:text-5xl text-4xl gap-4 w-full"
+        >
+          <div class="flex gap-2">
+            <i class="fa-regular fa-calendar"></i>
+            <h1>Todo List</h1>
+          </div>
+          <button class="block md:hidden cursor-pointer" id="navBtn">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </header>
+      <nav
+        id="mobileMenu"
+        class="hidden md:hidden absolute top-30 left-0 w-[100%] bg-gray-400 p-4 shadow-lg"
+      >
         <div class="flex flex-col items-start w-full">
-        <button class="py-2.5 px-5 w-full text-left hover:bg-gray-300 cursor-pointer"><i class="fa-solid fa-inbox"></i> Inbox</button>
-        <button class="py-2.5 px-5 w-full text-left hover:bg-gray-300 cursor-pointer"><i class="fa-solid fa-calendar"></i> Today</button>
-        <button class="py-2.5 px-5 w-full text-left hover:bg-gray-300 cursor-pointer"><i class="fa-regular fa-calendar"></i> This week</button>
+          <button
+            class="py-2.5 px-5 w-full text-left hover:bg-gray-300 cursor-pointer"
+          >
+            <i class="fa-solid fa-inbox"></i> Inbox
+          </button>
+          <button
+            class="py-2.5 px-5 w-full text-left hover:bg-gray-300 cursor-pointer"
+          >
+            <i class="fa-solid fa-calendar"></i> Today
+          </button>
+          <button
+            class="py-2.5 px-5 w-full text-left hover:bg-gray-300 cursor-pointer"
+          >
+            <i class="fa-regular fa-calendar"></i> This week
+          </button>
         </div>
         <h1 class="text-3xl font-bold">Projects</h1>
         <div class="flex flex-col items-start w-full">
-        <button class="py-2.5 px-5 w-full text-left hover:bg-gray-300 cursor-pointer"><i class="fa-solid fa-plus"></i> Add Project</button>
+          <button
+            class="py-2.5 px-5 w-full text-left hover:bg-gray-300 cursor-pointer"
+          >
+            <i class="fa-solid fa-plus"></i> Add Project
+          </button>
         </div>
       </nav>
-      <main class="col-span-full md:col-start-2 md:col-span-1  flex justify-center">
+      <nav
+        class="hidden md:flex md:row-start-2 md:col-start-1 flex-col items-start gap-4 p-6 bg-gray-400 font-medium"
+      >
+        <div class="flex flex-col items-start w-full">
+          <button
+            class="py-2.5 px-5 w-full text-left hover:bg-gray-300 cursor-pointer"
+          >
+            <i class="fa-solid fa-inbox"></i> Inbox
+          </button>
+          <button
+            class="py-2.5 px-5 w-full text-left hover:bg-gray-300 cursor-pointer"
+          >
+            <i class="fa-solid fa-calendar"></i> Today
+          </button>
+          <button
+            class="py-2.5 px-5 w-full text-left hover:bg-gray-300 cursor-pointer"
+          >
+            <i class="fa-regular fa-calendar"></i> This week
+          </button>
+        </div>
+        <h1 class="text-3xl font-bold">Projects</h1>
+        <div class="flex flex-col items-start w-full">
+          <button
+            class="py-2.5 px-5 w-full text-left hover:bg-gray-300 cursor-pointer"
+          >
+            <i class="fa-solid fa-plus"></i> Add Project
+          </button>
+        </div>
+      </nav>
+      <main
+        class="col-span-full md:col-start-2 md:col-span-1 flex justify-center"
+      >
         <h1>Inbox</h1>
       </main>
-      <footer class="col-span-full flex justify-center gap-1 bg-gray-700 p-2 text-white text-xl">
+      <footer
+        class="col-span-full flex justify-center gap-1 bg-gray-700 p-2 text-white text-xl"
+      >
         <p>
-        Copyright &#169;
-        <script>
-          document.write(new Date().getFullYear())
-        </script>
+          Copyright &#169;
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
         </p>
         <a href="https://github.com/Garfieldas/todo-app">Grafieldas</a>
       </footer>
     </div>
     <script type="module" src="/src/main.ts"></script>
-    <script src="https://kit.fontawesome.com/f0a76e6894.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/f0a76e6894.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
