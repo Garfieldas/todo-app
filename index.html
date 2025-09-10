@@ -10,12 +10,17 @@
   <body>
     <div class="grid grid-cols-[300px_1fr] grid-rows-[auto_1fr] min-h-screen" id="app">
     <header class="col-span-3 flex justify-between items-center p-10 bg-gray-700 text-white">
-      <div class="flex justify-center text-5xl gap-4">
+      <div class="flex md:justify-center justify-between md:text-5xl text-4xl gap-4 w-full">
+        <div class="flex gap-2">
       <i class="fa-regular fa-calendar"></i>
         <h1>Todo List</h1>
       </div>
+        <button class="block md:hidden">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
     </header>
-      <nav class="row-span-1 flex flex-col items-start gap-4 p-6 bg-gray-400 font-medium">
+      <nav class="hidden md:flex flex-col items-start gap-4 p-6 bg-gray-400 font-medium">
         <div class="flex flex-col items-start w-full">
         <button class="py-2.5 px-5 w-full text-left hover:bg-gray-300 cursor-pointer"><i class="fa-solid fa-inbox"></i> Inbox</button>
         <button class="py-2.5 px-5 w-full text-left hover:bg-gray-300 cursor-pointer"><i class="fa-solid fa-calendar"></i> Today</button>
@@ -26,7 +31,7 @@
         <button class="py-2.5 px-5 w-full text-left hover:bg-gray-300 cursor-pointer"><i class="fa-solid fa-plus"></i> Add Project</button>
         </div>
       </nav>
-      <main class="col-span-2 flex justify-center">
+      <main class="col-span-3 md:col-span-2 flex justify-center">
         <h1>Inbox</h1>
       </main>
       <footer class="col-span-3 flex justify-center gap-1 bg-gray-700 p-2 text-white text-xl">
