@@ -90,7 +90,7 @@
       >
         <div class="w-full max-w-3xl flex items-center justify-between">
           <h1 class="text-3xl font-bold">Inbox</h1>
-          <button
+          <button id="openTaskBtn"
             class="py-2.5 px-5 rounded-lg hover:bg-gray-200 cursor-pointer"
           >
             <i class="fa-solid fa-plus"></i> Add Task
@@ -138,6 +138,104 @@
           </article>
         </div>
       </main>
+<div
+  id="addTaskModal"
+  class="hidden fixed inset-0 z-[1000]"
+  aria-hidden="true"
+>
+  <div class="absolute inset-0 bg-black/40"></div>
+
+  <div
+    class="absolute inset-0 flex items-start justify-center p-4 md:p-8 overflow-y-auto"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="addTaskTitle"
+  >
+    <div
+      class="w-full max-w-xl rounded-2xl bg-white shadow-xl border border-gray-200"
+    >
+      <div class="flex items-center justify-between p-5 border-b">
+        <h2 id="addTaskTitle" class="text-xl font-semibold">Add New Task</h2>
+        <button
+          id="closeAddTaskBtn"
+          class="p-2 rounded hover:bg-gray-100"
+          aria-label="Close"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <form id="addTaskForm" class="p-5 space-y-4">
+        <div>
+          <label for="taskName" class="block text-sm font-medium mb-1">Task name *</label>
+          <input
+            id="taskName"
+            name="name"
+            type="text"
+            required
+            class="w-full rounded-lg border px-3 py-2 outline-none focus:ring-2 focus:ring-gray-700"
+            placeholder="e.g., Buy groceries"
+          />
+        </div>
+
+        <div>
+          <label for="taskDesc" class="block text-sm font-medium mb-1">Description</label>
+          <textarea
+            id="taskDesc"
+            name="desc"
+            rows="3"
+            class="w-full rounded-lg border px-3 py-2 outline-none focus:ring-2 focus:ring-gray-700"
+            placeholder="Optional details…"
+          ></textarea>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div>
+            <label for="taskDue" class="block text-sm font-medium mb-1">Due date</label>
+            <input
+              id="taskDue"
+              name="due"
+              type="date"
+              class="w-full rounded-lg border px-3 py-2 outline-none focus:ring-2 focus:ring-gray-700"
+            />
+          </div>
+
+          <div>
+            <label for="taskProject" class="block text-sm font-medium mb-1">Project</label>
+            <input
+              id="taskProject"
+              name="project"
+              type="text"
+              class="w-full rounded-lg border px-3 py-2 outline-none focus:ring-2 focus:ring-gray-700"
+              placeholder="e.g., Personal"
+            />
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <input id="taskStatus" name="status" type="checkbox" class="size-4" />
+          <label for="taskStatus" class="text-sm">Mark as done</label>
+        </div>
+
+        <div class="pt-2 flex items-center justify-end gap-2">
+          <button
+            type="button"
+            id="cancelAddTaskBtn"
+            class="rounded-lg border px-4 py-2 hover:bg-gray-50"
+          >
+            Cancel
+          </button>
+          <button
+            type="submit"
+            class="rounded-lg bg-gray-800 text-white px-4 py-2 hover:bg-gray-700"
+          >
+            Save Task
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
 
       <footer
         class="col-span-full flex justify-center gap-1 bg-gray-700 p-2 text-white text-xl"
