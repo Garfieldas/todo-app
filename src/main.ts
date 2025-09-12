@@ -1,10 +1,9 @@
+import { initNavBarToggle } from "./utilities/useNavBarToggle";
 import { useAddTaskModal } from "./composable/useAddTaskModal";
 
+const InitNavBarToggle = initNavBarToggle('#mobileMenu', '#navBtn');
 const InitiliazeModal = useAddTaskModal('#addTaskModal', '#openTaskBtn');
 
-const mobileMenu = document.querySelector('#mobileMenu');
-const navBtn = document.querySelector('#navBtn');
-
-navBtn?.addEventListener('click', () => mobileMenu?.classList.toggle('hidden'));
+InitNavBarToggle();
 InitiliazeModal();
 
