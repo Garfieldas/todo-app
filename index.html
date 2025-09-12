@@ -85,16 +85,58 @@
           </button>
         </div>
       </nav>
-      <main class="col-span-full md:col-start-2 md:row-start-2 p-4 flex justify-center ">
-        <div class="flex flex-col items-center gap-4">
-        <h1 class="text-3xl mt-5 font-bold">Inbox</h1>
+      <main
+        class="col-span-full md:col-start-2 md:row-start-2 p-6 flex flex-col items-center"
+      >
+        <div class="w-full max-w-3xl flex items-center justify-between">
+          <h1 class="text-3xl font-bold">Inbox</h1>
           <button
-            class="py-2.5 px-5 text-left hover:bg-gray-300 cursor-pointer"
+            class="py-2.5 px-5 rounded-lg hover:bg-gray-200 cursor-pointer"
           >
             <i class="fa-solid fa-plus"></i> Add Task
           </button>
         </div>
-          </main>
+        <div class="w-full max-w-3xl mt-6 space-y-4">
+          <article
+            class="rounded-2xl border border-gray-200 bg-white shadow p-5"
+          >
+            <header class="flex items-start justify-between gap-4">
+              <div>
+                <h3 class="text-xl font-semibold">Buy groceries</h3>
+                <p class="text-gray-600 mt-1">
+                  Milk, eggs, bread, and veggies.
+                </p>
+              </div>
+
+              <span
+                class="shrink-0 rounded-full px-3 py-1 text-sm font-medium bg-yellow-100 text-yellow-800"
+              >
+                Pending
+              </span>
+            </header>
+
+            <div
+              class="mt-4 flex flex-wrap items-center gap-3 text-sm text-gray-500"
+            >
+              <span
+                ><i class="fa-regular fa-clock"></i> Created: 2025-09-12</span
+              >
+              <span><i class="fa-solid fa-tag"></i> Project: Personal</span>
+            </div>
+
+            <div class="mt-5 flex items-center gap-2">
+              <button class="rounded-lg border px-3 py-2 hover:bg-gray-50">
+                <i class="fa-solid fa-check"></i> Mark done
+              </button>
+              <button class="rounded-lg border px-3 py-2 hover:bg-gray-50">
+                <i class="fa-regular fa-pen-to-square"></i> Edit
+              </button>
+              <button class="rounded-lg border px-3 py-2 hover:bg-gray-50">
+                <i class="fa-regular fa-trash-can"></i> Delete
+              </button>
+            </div>
+          </article>
+        </div>
       </main>
 
       <footer
